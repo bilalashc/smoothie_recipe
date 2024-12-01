@@ -1,0 +1,15 @@
+# Ignore dependency folder
+
+node_modules
+
+# Ignore compiled JavaScript files
+dist/
+
+# Ignore environment files
+.env
+
+# Ignore all log files             
+*.log
+
+# Ignore macOS system files
+.DS_Store
