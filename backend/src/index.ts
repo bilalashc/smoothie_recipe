@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv'
+import cors from 'cors';
 import smoothieRoutes from './routes/smoothieRoutes'
 
 //Load environment variables
@@ -13,6 +14,8 @@ const PORT = process.env.PORT
 
 //Middleware
 app.use(express.json())
+app.use(cors());
+
 
 //Routes
 app.use('/api/smoothies', smoothieRoutes)
