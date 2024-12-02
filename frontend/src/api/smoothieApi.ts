@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { UpdateSmoothieInput } from './types';
 
 const API_URL = "http://localhost:5001/api/smoothies"
 
@@ -35,4 +36,22 @@ export const createSmoothie = async (smoothie: any) => {
         throw new Error("Failed to create new smoothie")
     }
 }
+
+export const updateSmoothie = async ({id, ...updates}: UpdateSmoothieInput) => {
+    try {
+        const response = await api.put(`/${id}`,updates);
+        return response.data
+    } catch (error){
+        throw new Error("Failed to update smoothie")
+    }
+}
+
+export const deleteSmoothie = async (id: string) => {
+    try {
+        await api.delete(`${id}`);
+    } catch (error){
+        throw new Error("Failed to delete smoothie")
+    }
+}
+
 
