@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv'
+import smoothieRoutes from './routes/smoothieRoutes'
 
 //Load environment variables
 dotenv.config()
@@ -10,17 +11,17 @@ const app = express();
 // Use PORT from .env
 const PORT = process.env.PORT
 
-//Middleware to parse json bodies
+//Middleware
 app.use(express.json())
 
-
-
-
+//Routes
+app.use('/api/smoothies', smoothieRoutes)
 
 app.get('/', (request, response) => {
     response.send("Welcome to Smoothie Recipe backend")
 })
 
+//Start Server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);  
 })
