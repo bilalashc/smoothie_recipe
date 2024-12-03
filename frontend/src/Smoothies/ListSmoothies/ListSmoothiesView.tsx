@@ -1,76 +1,55 @@
 import { useEffect, useState } from "react";
 import { useSmoothiesContext } from "../context";
-import {useNavigate} from 'react-router-dom'
-import { deleteSmoothie, getSmoothies } from "../../api/smoothieApi";
+import { useNavigate } from "react-router-dom";
+import { getSmoothies } from "../../api/smoothieApi";
 import { Smoothie } from "../context/SmoothiesProvider/types";
 import { DeleteModal } from "./components/DeleteModal";
 import { SmoothieCard } from "./components/SmoothieCard";
-import './styles.css'
+import "./styles.css";
+import { useDeleteSmoothie, useShareSmoothie } from "../utils/hooks";
 
 export const ListSmoothiesView = () => {
-    const {smoothies, setSmoothies, loading, setLoading, setError} = useSmoothiesContext();
-    const navigate = useNavigate();
-    const [searchInput, setSearchInput] = useState<string>("");
-    const [smoothieToDelete, setSmoothieToDelete] = useState<string | null>(null);
+  const { smoothies, setSmoothies, loading, setLoading, setError } =
+    useSmoothiesContext();
+  const navigate = useNavigate();
+  const [searchInput, setSearchInput] = useState<string>("");
+  const [smoothieToDelete, setSmoothieToDelete] = useState<string | null>(null);
+  const handleDelete = useDeleteSmoothie(smoothieToDelete, setSmoothieToDelete);
+  const handleShare = useShareSmoothie();
 
-    useEffect(() => {
-        const fetchSmoothies = async () => {
-            try {
-                setLoading(true)
+  useEffect(() => {
+    const fetchSmoothies = async () => {
+      try {
+        setLoading(true);
 
-                const data = await getSmoothies();
-                setSmoothies(data);
+        const data = await getSmoothies();
+        setSmoothies(data);
+      } catch (error) {
+        console.error(error, "Failed to fetch smoothies");
+        setError("Failed to fetch smoothies");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchSmoothies();
+  }, [setSmoothies, setLoading, setError]);
 
-            } catch (error){
-                console.error(error, "Failed to fetch smoothies")
-                setError("Failed to fetch smoothies")
-            } finally {
-                setLoading(false)
-            }
-        }
-        fetchSmoothies();
+  const handleEdit = (smoothie: Smoothie) => {
+    navigate(`edit/${smoothie.id}`);
+  };
 
-    },[setSmoothies, setLoading, setError])
+  const filteredSmoothies = smoothies.filter((smoothie) =>
+    smoothie.name.toLowerCase().includes(searchInput.toLowerCase())
+  );
 
-    const handleEdit = (smoothie: Smoothie) => {
-        navigate(`edit/${smoothie.id}`)
-    }
+  if (loading) {
+    return <div className="loading">Loading Smoothies...</div>;
+  }
 
-    const handleDelete = async () => {
-        if (!smoothieToDelete) {
-            return
-        }
-
-        try {
-            await deleteSmoothie(smoothieToDelete);
-            setSmoothies(smoothies.filter(smoothie => smoothie.id !== smoothieToDelete))
-            setSmoothieToDelete(null)
-        } catch (error){
-            console.error(error, "Failed to delete smoothie")
-            setError("Failed to delete smoothie")
-        }
-    }
-
-    const handleShare = async(smoothie: Smoothie) => {
-        const shareUrl = `${window.location.origin}/smoothies/${smoothie.id}`
-        try {
-            await navigator.clipboard.writeText(shareUrl)
-            alert("The smoothie link has been copied to your clipboard")
-        } catch (error) {
-            alert("Failed to copy smoothie link to clipboard")
-        }
-    }
-
-    const filteredSmoothies = smoothies.filter(smoothie => smoothie.name.toLowerCase().includes(searchInput.toLowerCase()));
-
-    if (loading){
-        return <div className="loading">Loading Smoothies...</div>
-    }
-
-    return (
-        <div className="smoothies-container">
+  return (
+    <div className="smoothies-container">
       <div className="smoothies-header">
-      <h1 className="page-title">Smoothie Recipebook</h1>
+        <h1 className="page-title">Smoothie Recipebook</h1>
         <input
           type="search"
           className="search-input"
@@ -79,12 +58,17 @@ export const ListSmoothiesView = () => {
           onChange={(e) => setSearchInput(e.target.value)}
           aria-label="Search smoothies"
         />
-        <button 
-          className="create-button"
-          onClick={() => navigate('new')}
-        >
-          Create New Smoothie
-        </button>
+        <div className="button-group">
+          <button className="create-button" onClick={() => navigate("new")}>
+            Create New Smoothie
+          </button>
+          <button
+            className="create-button"
+            onClick={() => navigate("allergies")}
+          >
+            I Have Allergies
+          </button>
+        </div>
       </div>
 
       <div className="smoothies-grid">
@@ -105,6 +89,5 @@ export const ListSmoothiesView = () => {
         onConfirm={handleDelete}
       />
     </div>
-    )
-
-}
+  );
+};

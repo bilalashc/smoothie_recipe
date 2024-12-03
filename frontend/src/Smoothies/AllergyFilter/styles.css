@@ -1,0 +1,221 @@
+/* Container */
+.smoothies-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.smoothies-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+/* Page title */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+/* Allergy filter section */
+.allergy-filter-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Filter instruction text */
+.filter-instruction {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Dropdown container */
+.dropdown-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Dropdown button */
+.dropdown-button {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dropdown-button:hover {
+    border-color: #b8c2cc;
+}
+
+.dropdown-button:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Dropdown arrow */
+.dropdown-arrow {
+    font-size: 12px;
+    margin-left: 10px;
+    color: #666;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-top: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dropdown item */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Checkbox styling */
+.dropdown-item input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Selected ingredients display */
+.selected-ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 0 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Individual selected ingredient tag */
+.selected-ingredient {
+    background-color: #e9ecef;
+    padding: 4px 12px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.selected-ingredient:hover {
+    background-color: #dee2e6;
+}
+
+/* Remove ingredient button */
+.remove-ingredient {
+    background: none;
+    border: none;
+    margin-left: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0 4px;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.remove-ingredient:hover {
+    color: #dc3545;
+}
+
+/* Create/Back button */
+.create-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    margin-top: 20px;
+}
+
+.create-button:hover {
+    background-color: #0056b3;
+}
+
+/* Smoothies grid */
+.smoothies-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Loading state */
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* No results message */
+.no-results {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+/* Scrollbar styling for dropdown */
+.dropdown-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
