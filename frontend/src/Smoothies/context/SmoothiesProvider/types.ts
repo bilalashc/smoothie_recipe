@@ -10,6 +10,7 @@ interface IngredientDetails {
     smoothieId: string;
     ingredientId: string;
     quantity: number;
+    unit: string;
     createdAt: string;
     updatedAt: string;
     ingredient: IngredientDetails;

@@ -11,7 +11,7 @@ const App = () => {
     <Suspense fallback={<div>Loading Smoothies...</div>}>
     <Routes>
       {/*Smoothies*/}
-      <Route path="/" element={<Navigate to="/smoothies" replace />} />
+      {/* <Route path="/" element={<Navigate to="/smoothies" replace />} /> */}
       <Route path="/smoothies/*" element={<SmoothiesRoutes/>}/>
     </Routes>
     </Suspense>

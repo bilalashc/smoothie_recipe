@@ -33,7 +33,7 @@ export const ListSmoothiesView = () => {
     },[setSmoothies, setLoading, setError])
 
     const handleEdit = (smoothie: Smoothie) => {
-        navigate(`/smoothies/edit/${smoothie.id}`)
+        navigate(`edit/${smoothie.id}`)
     }
 
     const handleDelete = async () => {
@@ -87,7 +87,7 @@ export const ListSmoothiesView = () => {
         />
         <button 
           className="create-button"
-          onClick={() => navigate('/smoothies/new')}
+          onClick={() => navigate('new')}
         >
           Create New Smoothie
         </button>

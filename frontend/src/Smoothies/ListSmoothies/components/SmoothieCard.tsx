@@ -42,7 +42,7 @@ export const SmoothieCard = ({smoothie, onEdit, onDelete, onShare}: SmoothieCard
             <div className="ingredients-list">
                 {smoothie.ingredients.map((item) => (
                     <span key={item.ingredientId} className="ingredient-tag">
-                        {item.ingredient.name} {item.quantity}
+                        {item.quantity} {item.unit} of {item.ingredient.name} 
                     </span>
                 ))} 
             </div>

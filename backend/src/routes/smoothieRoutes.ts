@@ -64,6 +64,7 @@ router.post('/', async (req, res) => {
                 ingredients: {
                     create: ingredients.map((ingredient: any) => ({
                         quantity: ingredient.quantity,
+                        unit: ingredient.unit,
                         ingredient: {
                             connectOrCreate: {
                                 where: {name: ingredient.name},
@@ -100,6 +101,7 @@ router.post('/', async (req, res) => {
     }
 })
 
+//Updating a Smoothie
 router.put("/:id", async (req, res) => {
     const {id} = req.params;
     const {name, ingredients, tags} = req.body;
