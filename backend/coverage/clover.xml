@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1733260738926" clover="3.2.0">
+  <project timestamp="1733260738926" name="All files">
+    <metrics statements="38" coveredstatements="38" conditionals="10" coveredconditionals="8" methods="19" coveredmethods="19" elements="67" coveredelements="65" complexity="0" loc="38" ncloc="38" packages="1" files="1" classes="1"/>
+    <file name="smoothieHandlers.ts" path="/Users/bilal/Desktop/engineering/projects/smoothie-recipebook-wxmngk/backend/src/routes/smoothieHandlers.ts">
+      <metrics statements="38" coveredstatements="38" conditionals="10" coveredconditionals="8" methods="19" coveredmethods="19"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="18" count="3" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+      <line num="20" count="3" type="stmt"/>
+      <line num="21" count="3" type="stmt"/>
+      <line num="29" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="39" count="2" type="stmt"/>
+      <line num="40" count="2" type="stmt"/>
+      <line num="41" count="2" type="stmt"/>
+      <line num="42" count="2" type="stmt"/>
+      <line num="46" count="4" type="stmt"/>
+      <line num="58" count="4" type="cond" truecount="3" falsecount="1"/>
+      <line num="74" count="1" type="stmt"/>
+      <line num="76" count="1" type="stmt"/>
+      <line num="80" count="4" type="stmt"/>
+      <line num="81" count="4" type="stmt"/>
+      <line num="82" count="4" type="stmt"/>
+      <line num="84" count="4" type="stmt"/>
+      <line num="85" count="4" type="stmt"/>
+      <line num="89" count="3" type="stmt"/>
+      <line num="93" count="2" type="stmt"/>
+      <line num="98" count="2" type="stmt"/>
+      <line num="110" count="2" type="cond" truecount="3" falsecount="1"/>
+      <line num="125" count="1" type="stmt"/>
+      <line num="127" count="3" type="stmt"/>
+      <line num="131" count="2" type="stmt"/>
+      <line num="132" count="2" type="stmt"/>
+      <line num="133" count="2" type="stmt"/>
+      <line num="134" count="2" type="stmt"/>
+      <line num="137" count="1" type="stmt"/>
+      <line num="139" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
