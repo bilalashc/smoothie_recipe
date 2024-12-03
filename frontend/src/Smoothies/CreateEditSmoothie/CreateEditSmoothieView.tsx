@@ -11,13 +11,31 @@ interface Ingredient {
   unit: string;
 }
 
+interface IngredientName {
+    id: string;
+    quantity: string;
+    unit: string;
+    ingredient: {
+        id: string;
+        name: string;
+    }
+}
+
+interface TagName {
+    tagId: string;
+    tag: {
+        id: string;
+        name: string;
+    }
+}
+
 interface FormData {
   name: string;
   ingredients: Ingredient[];
   tags: string[];
 }
 
-export const CreateEditSmoothieView: React.FC = () => {
+export const CreateEditSmoothieView = () => {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const isEditing = Boolean(id);
@@ -42,12 +60,12 @@ export const CreateEditSmoothieView: React.FC = () => {
         console.log(smoothie, "fetch smoothie data")
         setFormData({
           name: smoothie.name,
-          ingredients: smoothie.ingredients.map((ing: any) => ({
+          ingredients: smoothie.ingredients.map((ing: IngredientName) => ({
             name: ing.ingredient.name,
-            quantity: ing.quantity.toString(),
+            quantity: ing.quantity,
             unit: ing.unit,
           })),
-          tags: smoothie.tags.map((tag: any) => tag.tag.name),
+          tags: smoothie.tags.map((tag: TagName) => tag.tag.name),
         });
       } catch (error) {
         setLocalError('Failed to fetch smoothie details');

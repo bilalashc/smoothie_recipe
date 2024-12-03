@@ -39,7 +39,11 @@ router.get("/:id", async (req, res) => {
                         ingredient: true
                     }
                 },
-                tags: true
+                tags: {
+                    include: {
+                      tag: true
+                    }
+                }
             }
         })
 

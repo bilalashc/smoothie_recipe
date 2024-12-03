@@ -9,7 +9,7 @@ const SmoothiesRoutes = () => {
             <Routes>
                 <Route path="/" element={<ListSmoothiesView/>}/>
                 <Route path="new" element={<CreateEditSmoothieView/>} />
-                <Route path="edit/:id" element={"Hello Edit Smoothie Page"} />
+                <Route path="edit/:id" element={<CreateEditSmoothieView/>} />
                 {/* <Route path=":id" element={"Smoothie Details"} /> */}
             </Routes>
         </SmoothiesProvider>
