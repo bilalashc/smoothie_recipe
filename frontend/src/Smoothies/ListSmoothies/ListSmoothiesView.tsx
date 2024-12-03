@@ -8,7 +8,7 @@ import { SmoothieCard } from "./components/SmoothieCard";
 import './styles.css'
 
 export const ListSmoothiesView = () => {
-    const {smoothies, setSmoothies, setSelectedSmoothie, setIsEditing, setIsCreating, loading, setLoading, error, setError} = useSmoothiesContext();
+    const {smoothies, setSmoothies, loading, setLoading, setError} = useSmoothiesContext();
     const navigate = useNavigate();
     const [searchInput, setSearchInput] = useState<string>("");
     const [smoothieToDelete, setSmoothieToDelete] = useState<string | null>(null);
@@ -66,12 +66,6 @@ export const ListSmoothiesView = () => {
     if (loading){
         return <div className="loading">Loading Smoothies...</div>
     }
-
-    if (error){
-        return <div className="error">{error}</div>
-    }
-
-
 
     return (
         <div className="smoothies-container">

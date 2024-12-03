@@ -44,7 +44,7 @@ interface Smoothie {
 
   export const CreateEditSmoothieView: React.FC = () => {
     const navigate = useNavigate();
-    const { id } = useParams<{ id: string }>();
+    const { id } = useParams();
     const isEditing = Boolean(id);
   
     const [formData, setFormData] = useState<FormData>({
