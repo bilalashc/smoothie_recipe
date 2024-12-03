@@ -12,9 +12,11 @@ const api = axios.create({
 
 export const getSmoothies = async () => {
     try {
+        console.log("Making API request to:", API_URL)
         const response = await api.get("");
         return response.data  
     } catch (error){
+        console.error("API error:", error)
         throw new Error("Failed to fetch smoothies")
     }
 };

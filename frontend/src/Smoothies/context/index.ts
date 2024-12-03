@@ -1,2 +1,2 @@
-export { useSmoothiesContext, SmoothiesContext } from "./SmoothiesProvider";
+export { useSmoothiesContext, SmoothiesContext, SmoothiesProvider } from "./SmoothiesProvider";
 

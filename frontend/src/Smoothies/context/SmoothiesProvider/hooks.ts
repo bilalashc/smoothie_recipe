@@ -6,4 +6,5 @@ export const useSmoothiesContext = () => {
     if (!context){
         throw new Error("useSmoothiesContext must be used within Smoothies ")
     }
+    return context;
 }

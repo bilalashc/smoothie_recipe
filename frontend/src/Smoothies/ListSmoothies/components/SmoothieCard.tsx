@@ -1,4 +1,6 @@
 import { Smoothie } from "../../context/SmoothiesProvider/types";
+import '../styles.css'
+
 
 interface SmoothieCardProps {
     smoothie: Smoothie;
@@ -39,8 +41,8 @@ export const SmoothieCard = ({smoothie, onEdit, onDelete, onShare}: SmoothieCard
 
             <div className="ingredients-list">
                 {smoothie.ingredients.map((item) => (
-                    <span key={item.id} className="ingredient-tag">
-                        {item.name} {item.quantity}
+                    <span key={item.ingredientId} className="ingredient-tag">
+                        {item.ingredient.name} {item.quantity}
                     </span>
                 ))} 
             </div>
@@ -48,8 +50,8 @@ export const SmoothieCard = ({smoothie, onEdit, onDelete, onShare}: SmoothieCard
             {smoothie.tags && smoothie.tags.length > 0 && (
             <div className="tags-container">
                 {smoothie.tags.map((tag) => (
-                    <span key={tag.id} className="tag">
-                        {tag.name}
+                    <span key={tag.tagId} className="tag">
+                        {tag.tag.name}
                     </span>
                 ))}
             </div>

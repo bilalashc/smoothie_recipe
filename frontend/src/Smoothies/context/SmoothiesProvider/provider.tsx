@@ -7,7 +7,7 @@ export const SmoothiesProvider = ({children}: {children: React.ReactNode}) => {
     const [selectedSmoothie, setSelectedSmoothie] = useState<Smoothie | null>(null);
     const [isCreating, setIsCreating] = useState<boolean>(false);
     const [isEditing, setIsEditing] = useState<boolean>(false);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null)
 
     return (
@@ -25,6 +25,7 @@ export const SmoothiesProvider = ({children}: {children: React.ReactNode}) => {
             error,
             setError
         }}>
+            {children}
         </SmoothiesContext.Provider>
     )
 }

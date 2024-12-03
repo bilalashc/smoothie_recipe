@@ -14,7 +14,11 @@ router.get('/', async (req, res) => {
                         ingredient: true
                     }
                 },
-                tags: true
+                tags: {
+                    include: {
+                      tag: true
+                    }
+                }
             }
         });
         res.json(smoothies)
