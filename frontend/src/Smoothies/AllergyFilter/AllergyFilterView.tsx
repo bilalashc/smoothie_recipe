@@ -160,7 +160,7 @@ export const AllergyFilterView = () => {
           ))
         ) : (
           <div className="no-results">
-            No smoothies found without the selected ingredients.
+            No smoothies found.
           </div>
         )}
       </div>
