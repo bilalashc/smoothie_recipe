@@ -83,7 +83,7 @@ export const AllergyFilterView = () => {
   return (
     <div className="smoothies-container">
       <div className="smoothies-header">
-        <h1 className="page-title">Filter Smoothies by Allergies</h1>
+        <h1 className="page-title">filter smoothies by allergies</h1>
         <div className="allergy-filter-section">
           <p className="filter-instruction">
             {

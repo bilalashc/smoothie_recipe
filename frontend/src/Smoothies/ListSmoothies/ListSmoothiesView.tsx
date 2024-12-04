@@ -50,7 +50,7 @@ export const ListSmoothiesView = () => {
   return (
     <div className="smoothies-container">
       <div className="smoothies-header">
-        <h1 className="page-title">Smoothie Recipebook</h1>
+        <h1 className="page-title">smoothie recipebook</h1>
         <input
           type="search"
           className="search-input"
