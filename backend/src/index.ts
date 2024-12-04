@@ -14,10 +14,7 @@ const PORT = process.env.PORT
 
 //Middleware
 app.use(express.json())
-app.use(cors({
-    origin: process.env.FRONTEND_URL || "https://smoothies-frontend.onrender.com",
-    credentials: true
-  }));
+app.use(cors());
 
 
 //Routes

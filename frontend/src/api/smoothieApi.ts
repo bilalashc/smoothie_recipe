@@ -2,7 +2,7 @@ import axios from "axios";
 import { CreateSmoothieInput, UpdateSmoothieInput } from "./types";
 import { Smoothie } from "../Smoothies/context/SmoothiesProvider/types";
 
-const API_URL = process.env.REACT_APP_API_URL || "https://smoothie-backend.onrender.com"
+const API_URL = process.env.REACT_APP_BASE_API_URL
 
 const api = axios.create({
   baseURL: API_URL,
