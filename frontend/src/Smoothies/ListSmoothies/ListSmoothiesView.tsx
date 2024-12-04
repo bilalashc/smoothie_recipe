@@ -3,10 +3,11 @@ import { useSmoothiesContext } from "../context";
 import { useNavigate } from "react-router-dom";
 import { getSmoothies } from "../../api/smoothieApi";
 import { Smoothie } from "../context/SmoothiesProvider/types";
-import { DeleteModal } from "./components/DeleteModal";
-import { SmoothieCard } from "./components/SmoothieCard";
+
 import "./styles.css";
 import { useDeleteSmoothie, useShareSmoothie } from "../utils/hooks";
+import { DeleteModal } from "../components/DeleteModal";
+import { SmoothieCard } from "../components/SmoothieCard";
 
 export const ListSmoothiesView = () => {
   const { smoothies, setSmoothies, loading, setLoading, setError } =
@@ -63,7 +64,7 @@ export const ListSmoothiesView = () => {
             Create New Smoothie
           </button>
           <button
-            className="create-button"
+            className="allergy-button"
             onClick={() => navigate("allergies")}
           >
             I Have Allergies

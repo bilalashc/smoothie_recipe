@@ -5,54 +5,63 @@
   padding: 20px;
 }
 
-/* Smoothies header */
+/* Search input */
+.search-input {
+  width: 100%;
+  max-width: 40rem;
+  padding: 10px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
 .smoothies-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 24px;
+  width: 100%;
 }
 
-/* Search input */
-.search-input {
-  width: 100%;
-  max-width: 500px;
-  padding: 10px 14px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
+/* Make both buttons exactly the same */
+.create-button,
+.allergy-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
   font-size: 16px;
-  margin-bottom: 16px;
+  transition: background-color 0.2s;
+  max-height: 4rem;
+  white-space: nowrap;
+  color: #fff;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+/* Separate colors for each button */
+.create-button {
+  background-color: #007bff;
+}
+
+.create-button:hover {
+  background-color: #0056b3;
+}
+
+.allergy-button {
+  background-color: #17a2b8;
+}
+
+.allergy-button:hover {
+  background-color: #138496;
 }
 
 .button-group {
   display: flex;
   gap: 12px;
-  margin-bottom: 16px;
-}
-
-.smoothies-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 24px;
-  width: 100%;
-}
-
-/*Create Button*/
-.create-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.2s;
-  white-space: nowrap;
-}
-
-.create-button:hover {
-  background-color: #0056b3;
 }
 
 /* Smoothies grid */
@@ -67,11 +76,12 @@
 .smoothie-card {
   width: 100%;
   max-width: 600px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #e5e5e5;
   border-radius: 8px;
   padding: 20px;
   background-color: #fff;
   transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .smoothie-card:hover {
@@ -92,6 +102,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
+  color: #2d3748;
 }
 
 /* Actions container */
@@ -108,15 +119,23 @@
   cursor: pointer;
   border-radius: 4px;
   font-size: 16px;
-  transition: background-color 0.2s, color 0.2s;
+  transition: all 0.2s ease;
 }
 
 .action-button:hover {
-  background-color: #f0f0f0;
+  background-color: #edf2f7;
+}
+
+.action-button.edit:hover {
+  color: #3182ce;
+}
+
+.action-button.share:hover {
+  color: #319795;
 }
 
 .action-button.delete:hover {
-  color: #dc3545; 
+  color: #e53e3e;
 }
 
 /* Ingredients list */
@@ -129,10 +148,12 @@
 
 /* Ingredient tag */
 .ingredient-tag {
-  background-color: #f8f9fa;
+  background-color: #f7fafc;
   padding: 6px 10px;
   border-radius: 4px;
   font-size: 0.9rem;
+  color: #4a5568;
+  border: 1px solid #edf2f7;
 }
 
 /* Tags container */
@@ -146,8 +167,11 @@
 .tag {
   background-color: #e9ecef;
   padding: 4px 10px;
-  border-radius: 12px;
+  border-radius: 8px;
   font-size: 0.8rem;
+  background-color: #f5f5f5;
+  color: #666666;
+  border: 1px solid #e0e0e0;
 }
 
 /* Loading and error messages */
@@ -169,7 +193,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,5 +256,5 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 30px;
-  color: #343a40; 
+  color: #343a40;
 }

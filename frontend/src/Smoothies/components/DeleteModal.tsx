@@ -1,4 +1,5 @@
-import "../styles.css";
+import '../ListSmoothies/styles.css'
+
 interface DeleteModalProps {
   showModal: boolean;
   onClose: () => void;

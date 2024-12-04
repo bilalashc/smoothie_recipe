@@ -1,5 +1,6 @@
-import { Smoothie } from "../../context/SmoothiesProvider/types";
-import '../styles.css'
+
+import { Smoothie } from '../context/SmoothiesProvider/types';
+import '../ListSmoothies/styles.css'
 
 
 interface SmoothieCardProps {
@@ -16,14 +17,14 @@ export const SmoothieCard = ({smoothie, onEdit, onDelete, onShare}: SmoothieCard
                 <h3 className="smoothie-title">{smoothie.name}</h3>
                 <div className="actions-container">
                 <button
-                    className="action-button"
+                    className="action-button share"
                     onClick={() => onShare(smoothie)}
                     aria-label="Share smoothie"
                 >
                     Share
                 </button>
                 <button
-                    className="action-button"
+                    className="action-button edit"
                     onClick={() => onEdit(smoothie)}
                     aria-label="Edit smoothie"
                 >

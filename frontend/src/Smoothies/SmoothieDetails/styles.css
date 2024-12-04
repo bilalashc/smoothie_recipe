@@ -34,13 +34,12 @@
   
   /* Smoothie details container */
   .smoothie-details-container {
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Align text to the left within the container */
-    margin: 0 auto; /* Center the container */
-    max-width: 600px; /* Optional: Set a max-width for the container */
+    text-align: left; 
+    margin: 0 auto; 
   }
   
   /* Smoothie name styling */
@@ -87,8 +86,6 @@
   }
   
   .tag {
-    background-color: #17a2b8;
-    color: #fff;
     padding: 8px 12px;
     border-radius: 20px;
     font-size: 0.9em;
