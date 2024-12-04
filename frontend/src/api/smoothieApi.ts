@@ -2,7 +2,7 @@ import axios from "axios";
 import { CreateSmoothieInput, UpdateSmoothieInput } from "./types";
 import { Smoothie } from "../Smoothies/context/SmoothiesProvider/types";
 
-const API_URL = "http://moothies-backend.us-east-1.elasticbeanstalk.com/"
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5001/api/smoothies"
 
 const api = axios.create({
   baseURL: API_URL,

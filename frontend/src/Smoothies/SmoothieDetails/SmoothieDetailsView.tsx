@@ -69,17 +69,13 @@ export const SmoothieDetailsView: React.FC = () => {
 
   return (
     <div className="smoothie-details-page">
-      <h1 className="page-title">Check out my Smoothie!</h1>
       {/* Back Button */}
-      <button className="back-button" onClick={() => navigate('/smoothies')}>
-        Back to Smoothie List
-      </button>
       <div className="smoothie-details-container">
         <h2 className="smoothie-name">{smoothie.name}</h2>
         {/* Ingredients Section */}
         <div className="section">
           <h3 className="section-title">Ingredients</h3>
-          <ul className="ingredients-list">
+          <ul className="ingredients-list-details">
             {smoothie.ingredients.map((item) => (
               <li key={item.id} className="ingredient-item">
                 {item.quantity} {item.unit} of {item.ingredient.name}
@@ -101,6 +97,9 @@ export const SmoothieDetailsView: React.FC = () => {
           </div>
         )}
       </div>
+      <button className="back-button" onClick={() => navigate('/smoothies')}>
+        Home
+      </button>
     </div>
   );
 };

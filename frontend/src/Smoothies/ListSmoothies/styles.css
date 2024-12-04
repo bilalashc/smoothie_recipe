@@ -79,9 +79,10 @@
   border: 1px solid #e5e5e5;
   border-radius: 8px;
   padding: 20px;
-  background-color: #fff;
+  background-color: #f9f0d3;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: monospace;
 }
 
 .smoothie-card:hover {

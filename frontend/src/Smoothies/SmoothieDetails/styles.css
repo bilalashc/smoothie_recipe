@@ -1,104 +1,104 @@
-/* styles.css */
-
 /* Page container styling */
 .smoothie-details-page {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-    text-align: center; /* Center-align text within the page */
-  }
-  
-  /* Page title styling */
-  .page-title {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* Back button styling */
-  .back-button {
-    background-color: #6c757d;
-    color: #fff;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-bottom: 30px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .back-button:hover {
-    background-color: #5a6268;
-  }
-  
-  /* Smoothie details container */
-  .smoothie-details-container {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left; 
-    margin: 0 auto; 
-  }
-  
-  /* Smoothie name styling */
-  .smoothie-name {
-    font-size: 1.8em;
-    margin-bottom: 30px;
-    color: #555;
-    text-align: center; /* Center-align the smoothie name */
-  }
-  
-  /* Section styling */
-  .section {
-    margin-bottom: 30px;
-  }
-  
-  .section-title {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    color: #555;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 5px;
-  }
-  
-  /* Ingredients list styling */
-  .ingredients-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .ingredient-item {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    color: #444;
-    padding: 12px 16px;
-    background-color: #f8f9fa;
-    border-radius: 4px;
-  }
-  
-  /* Tags styling */
-  .tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .tag {
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 0.9em;
-  }
-  
-  /* Loading and error messages */
-  .loading,
-  .error-message {
-    text-align: center;
-    font-size: 1.2em;
-    margin-top: 50px;
-  }
-  
-  .error-message {
-    color: #d9534f;
-  }
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Page title styling */
+.page-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Back button styling */
+.back-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Smoothie details container */
+.smoothie-details-container {
+  background-color: #f9f0d3;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  margin: 0 auto;
+  font-family: monospace;
+}
+
+/* Smoothie name styling */
+.smoothie-name {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Section styling */
+.section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #555;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 5px;
+}
+
+/* Ingredients list styling */
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredient-item {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #444;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+/* Tags styling */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 8px 12px;
+  border-radius: 14px;
+  font-size: 0.9em;
+}
+
+/* Loading and error messages */
+.loading,
+.error-message {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 50px;
+}
+
+.error-message {
+  color: #d9534f;
+}

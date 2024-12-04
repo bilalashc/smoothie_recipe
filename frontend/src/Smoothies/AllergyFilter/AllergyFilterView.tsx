@@ -97,7 +97,7 @@ export const AllergyFilterView = () => {
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
               {selectedIngredients.length === 0
-                ? "Select ingredients to filter out"
+                ? "Select ingredients to filter smoothies"
                 : `${selectedIngredients.length} ingredient${
                     selectedIngredients.length === 1 ? "" : "s"
                   } selected`}
