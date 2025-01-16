@@ -1,12 +1,3 @@
---------------------------------------------------------------------------------
-
-Higharc Software Engineer Challenge
------------------------------------
-
-Thank you for taking the time to complete Higharc's Software Engineering
-Challenge. We hope you can use this as an opportunity to showcase your
-technical skills.
-
 ### **Online Smoothie Recipebook**
 
 Expected total time: 4-6 hours
